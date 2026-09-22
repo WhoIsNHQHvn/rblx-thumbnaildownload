@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Asset Thumbnail/Image Downloader",
+  "version": "1.0.0",
+          "icons": {
+          "16": "icons/icon16.png",
+          "32": "icons/icon32.png",
+          "48": "icons/icon48.png",
+          "128": "icons/icon128.png"
+        },
+        
+  "description": "Downloads the WebP thumbnail image from Roblox Creator Store asset pages.",
+  "permissions": [
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://create.roblox.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://create.roblox.com/store/asset/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
