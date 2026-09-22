@@ -1,0 +1,1 @@
+An Chrome browser extension that adds an button to the bottom-right that you can click while viewing any asset via https://create.roblox.com/store/asset/ and download the asset's thumbnail by finding the image source url in the HTML!
